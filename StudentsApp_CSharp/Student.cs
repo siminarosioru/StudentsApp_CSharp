@@ -21,6 +21,12 @@ namespace StudentsApp_CSharp
             this.notes = notes;
         }
 
+        //the function returns the year of study
+        public byte studyYear
+        {
+            get { return year; }
+        }
+
         
     }
 }
