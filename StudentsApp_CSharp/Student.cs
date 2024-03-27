@@ -27,6 +27,12 @@ namespace StudentsApp_CSharp
             get { return year; }
         }
 
+        //the function returns the name of the student
+        public string studentName
+        {
+            get { return m_name; } 
+        }
+
         
     }
 }
