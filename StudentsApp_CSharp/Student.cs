@@ -33,6 +33,16 @@ namespace StudentsApp_CSharp
             get { return m_name; } 
         }
 
+        //the function calculates the average of the notes
+        public float Average()
+        {
+            float average = 0;
+            foreach(byte element in notes)
+            {
+                average = average + element;
+            }
+            return average / 5;
+        }
         
     }
 }
