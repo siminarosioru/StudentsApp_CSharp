@@ -43,6 +43,13 @@ namespace StudentsApp_CSharp
             }
             return average / 5;
         }
+
+        //the function displays the information about the student
+        public string studentDisplay()
+        {
+            return m_name + ", " + m_age + " years, year " + year + ", the average " + Average();
+        }
+
         
     }
 }
