@@ -48,6 +48,7 @@ namespace StudentsApp_CSharp
             }
         }
 
+        //created the listDisplay function
         private void listDisplay()
         {
             lstStudents.Items.Clear();
