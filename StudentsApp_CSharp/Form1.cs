@@ -50,7 +50,9 @@ namespace StudentsApp_CSharp
 
         private void listDisplay()
         {
-            
+            lstStudents.Items.Clear();
+            foreach (Student obj_s in list_student)
+                lstStudents.Items.Add(obj_s.studentDisplay());
         }
     }
 }
