@@ -55,5 +55,15 @@ namespace StudentsApp_CSharp
             foreach (Student obj_s in list_student)
                 lstStudents.Items.Add(obj_s.studentDisplay());
         }
+
+         //created the event for for the "Order by name" button
+        private void btn_OrderByName_Click(object sender, EventArgs e)
+        {
+            //created the object for name compatison
+            CompareName compareName_obj = new CompareName();
+            list_student.Sort(compareName_obj);
+            listDisplay();
+        }
+        
     }
 }
