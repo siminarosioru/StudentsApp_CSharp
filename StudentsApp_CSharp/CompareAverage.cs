@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentsApp_CSharp
 {
-    //created the CompareAverage function with the two objects
     class CompareAverage :IComparer<Student> 
     {
+        //created the CompareAverage function with the two objects
         public int Compare(Student x, Student y)
         {
             if (x.Average() > y.Average())
