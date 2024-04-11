@@ -93,7 +93,28 @@ namespace StudentsApp_CSharp
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
+        //created the event for the "Search name: " button
+        private void btn_SearchName_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string var_name = txt_SearchName.Text;
+                lstStudents.Items.Clear();
+
+                //take a student from the list
+                foreach (Student s_obj in list_student)
+                {
+                    //search for the name
+                    if (s_obj.studentName == var_name)
+                        lstStudents.Items.Add(s_obj.studentDisplay());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         
     }
 }
