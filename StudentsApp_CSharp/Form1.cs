@@ -115,6 +115,16 @@ namespace StudentsApp_CSharp
                 MessageBox.Show(ex.Message);
             }
         }
+
+        //created the event for the "Delete" button
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            if(lstStudents.SelectedIndex > -1)
+            {
+                list_student.RemoveAt(lstStudents.SelectedIndex);
+                listDisplay();
+            }
+        }
         
     }
 }
