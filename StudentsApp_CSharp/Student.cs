@@ -39,6 +39,12 @@ namespace StudentsApp_CSharp
             get { return m_name; } 
         }
 
+        //the function returns the age of the student
+        public byte AgeStudent
+        {
+            get { return m_age; }
+        }
+
         //the function calculates the average of the notes
         public float Average()
         {
