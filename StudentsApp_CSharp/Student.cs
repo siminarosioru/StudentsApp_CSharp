@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +14,8 @@ namespace StudentsApp_CSharp
         private byte[] notes = new byte[5];
 
         //constructor
-        public Student(byte year, byte[] notes, string name, byte age)
-            :base(name, age)
+        public Student(byte year, byte[] notes, string cnp, string name, byte age)
+            :base(cnp, name, age)
         {
             this.year = year;
             this.notes = notes;
@@ -25,6 +25,12 @@ namespace StudentsApp_CSharp
         public byte studyYear
         {
             get { return year; }
+        }
+
+        //the function returns the cnp of the student
+        public string CnpStudent
+        {
+            get { return cnp; }
         }
 
         //the function returns the name of the student
@@ -50,6 +56,6 @@ namespace StudentsApp_CSharp
             return m_name + ", " + m_age + " years, year " + year + ", the average " + Average();
         }
 
-        
+         
     }
 }
