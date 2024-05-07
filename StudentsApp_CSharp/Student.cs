@@ -56,6 +56,12 @@ namespace StudentsApp_CSharp
             return average / 5;
         }
 
+        //the get_Average_Notes function returns the average of the student's 5 notes
+        public float get_Average_Notes
+        {
+            get { return Average(); }
+        }
+
         //the function displays the information about the student
         public string studentDisplay()
         {
