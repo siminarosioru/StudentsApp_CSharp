@@ -34,7 +34,8 @@ namespace StudentsApp_CSharp
                 n_vector[4] = Convert.ToByte(cmb_Note5.Text);
 
                 //created the object
-                Student object_s = new Student(Convert.ToByte(cmb_Year.Text), n_vector, 
+                //updated the Student constructor
+                Student object_s = new Student(Convert.ToByte(cmb_Year.Text), n_vector, txt_CNP.Text,
                     txt_Name.Text,Convert.ToByte(numericUpDown_Age.Value));
 
                 //added the object_s to the generic list
