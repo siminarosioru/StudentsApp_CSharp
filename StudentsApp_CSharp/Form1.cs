@@ -23,6 +23,16 @@ namespace StudentsApp_CSharp
         //created the event for the Add button
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            //created the connection to a local database
+            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();  
+            string tabel_date = "select * from Persoana_Universitate";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(tabel_date, connectionString);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet, "Persoana_Universitate");
+            persoana_UniversitateDataGridView.DataSource = dataSet.Tables["Persoana_Universitate"].DefaultView;
+            
             byte[] n_vector = new byte[5];
 
             try 
