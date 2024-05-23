@@ -54,6 +54,12 @@ namespace StudentsApp_CSharp
                 //inserted the generic list into the local database for the Persoana_Universitate table
                 string insertQuery_Person = "INSERT INTO Persoana_Universitate(CNP, Name, Age) VALUES(@txt_CNP, " +
                     "@txt_Name, @numericUpDown_Age)";
+                
+                //create an object of type SqlCommand to execute the SQL command on the Persoana_Universitate table
+                SqlCommand cmd_Person = new SqlCommand(insertQuery_Person, conn);
+                cmd_Person.Parameters.AddWithValue("@txt_CNP", object_s.CnpStudent);
+                cmd_Person.Parameters.AddWithValue("@txt_Name", object_s.studentName);
+                cmd_Person.Parameters.AddWithValue("@numericUpDown_Age", object_s.AgeStudent);
 
                 listDisplay();
             }
