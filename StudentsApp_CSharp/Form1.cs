@@ -61,6 +61,9 @@ namespace StudentsApp_CSharp
                 cmd_Person.Parameters.AddWithValue("@txt_Name", object_s.studentName);
                 cmd_Person.Parameters.AddWithValue("@numericUpDown_Age", object_s.AgeStudent);
 
+                //run the SQL command for the Persoana_Universitate table
+                cmd_Person.ExecuteNonQuery();
+                
                 listDisplay();
             }
             catch(Exception ex)
