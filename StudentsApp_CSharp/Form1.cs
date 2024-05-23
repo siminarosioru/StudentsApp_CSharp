@@ -51,6 +51,10 @@ namespace StudentsApp_CSharp
                 //added the object_s to the generic list
                 list_student.Add(object_s);
 
+                //inserted the generic list into the local database for the Persoana_Universitate table
+                string insertQuery_Person = "INSERT INTO Persoana_Universitate(CNP, Name, Age) VALUES(@txt_CNP, " +
+                    "@txt_Name, @numericUpDown_Age)";
+
                 listDisplay();
             }
             catch(Exception ex)
