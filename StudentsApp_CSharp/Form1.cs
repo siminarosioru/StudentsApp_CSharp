@@ -63,6 +63,12 @@ namespace StudentsApp_CSharp
 
                 //run the SQL command for the Persoana_Universitate table
                 cmd_Person.ExecuteNonQuery();
+
+                //inserted the generic list into the local database for the StudentUniversitate table
+                string insertQuery_Student = "INSERT INTO StudentUniversitate(CNP, Year, Notes) " +
+                    "VALUES(@txt_CNP, @cmb_Year, @cmb_AverageNotes)";
+
+                
                 
                 listDisplay();
             }
