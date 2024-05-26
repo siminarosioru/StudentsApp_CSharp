@@ -74,7 +74,8 @@ namespace StudentsApp_CSharp
                 cmd_Student.Parameters.AddWithValue("@cmb_Year", object_s.studyYear);
                 cmd_Student.Parameters.AddWithValue("@cmb_AverageNotes", object_s.get_AverageNotes);
 
-                
+                //run the SQL command for the StudentUniversitate table
+                cmd_Student.ExecuteNonQuery();
                 
                 listDisplay();
             }
