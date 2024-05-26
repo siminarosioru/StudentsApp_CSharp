@@ -68,6 +68,12 @@ namespace StudentsApp_CSharp
                 string insertQuery_Student = "INSERT INTO StudentUniversitate(CNP, Year, Notes) " +
                     "VALUES(@txt_CNP, @cmb_Year, @cmb_AverageNotes)";
 
+                //create an object of type SqlCommand to execute the SQL command on the StudentUniversitate table
+                SqlCommand cmd_Student = new SqlCommand(insertQuery_Student, conn);
+                cmd_Student.Parameters.AddWithValue("@txt_CNP", object_s.CnpStudent);
+                cmd_Student.Parameters.AddWithValue("@cmb_Year", object_s.studyYear);
+                cmd_Student.Parameters.AddWithValue("@cmb_AverageNotes", object_s.get_AverageNotes);
+
                 
                 
                 listDisplay();
