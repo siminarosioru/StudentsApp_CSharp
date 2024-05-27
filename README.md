@@ -11,6 +11,7 @@
   * display of students from a specific year of study
   * searching for a student by name
   * deleting the selected student in the listBox type control
+- the StudentsApp_CSharp application is connected to a local database
 
 # User Interface Design
 - the graphic interface is in the following image:
