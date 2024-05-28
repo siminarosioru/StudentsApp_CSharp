@@ -14,5 +14,7 @@
 - the StudentsApp_CSharp application is connected to a local database
 
 # User Interface Design
+- the new graphic interface connected to a local database is in the following image:
+![](the%20new%20application%20interface.png)
 - the graphic interface is in the following image:
 ![](application%20interface.png)
