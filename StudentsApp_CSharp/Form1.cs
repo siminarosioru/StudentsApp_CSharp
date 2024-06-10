@@ -83,6 +83,9 @@ namespace StudentsApp_CSharp
             {
                 MessageBox.Show(ex.Message);
             }
+
+            //close the database connection
+            conn.Close();
         }
 
         //created the listDisplay function
