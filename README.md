@@ -16,5 +16,5 @@
 # User Interface Design
 - the new graphic interface connected to a local database is in the following image:
 ![](the%20new%20application%20interface.png)
-- the graphic interface is in the following image:
+- the graphic interface without connecting to a local database is in the following image:
 ![](application%20interface.png)
