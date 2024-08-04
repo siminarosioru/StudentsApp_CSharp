@@ -99,6 +99,12 @@ namespace StudentsApp_CSharp
         //created the event for the "Order by name" button
         private void btn_OrderByName_Click(object sender, EventArgs e)
         {
+            //created the connection to the local database and see all the information ordered by name
+            string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(connectionString);
+            
+            
+            
             //created the object for name compatison
             CompareName compareName_obj = new CompareName();
             list_student.Sort(compareName_obj);
