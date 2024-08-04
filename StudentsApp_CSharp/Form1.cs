@@ -102,7 +102,7 @@ namespace StudentsApp_CSharp
             //created the connection to the local database and see all the information ordered by name
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
             SqlConnection conn = new SqlConnection(connectionString);
-            
+            conn.Open();
             
             
             //created the object for name compatison
