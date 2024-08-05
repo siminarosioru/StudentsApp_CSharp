@@ -103,6 +103,10 @@ namespace StudentsApp_CSharp
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
+
+            //SQL command for SELECT and ORDER
+            string selectQuery_Person = "SELECT * FROM Persoana_Universitate ORDER BY Name";
+
             
             
             //created the object for name compatison
