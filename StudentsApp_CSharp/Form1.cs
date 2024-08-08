@@ -106,6 +106,11 @@ namespace StudentsApp_CSharp
 
             //SQL command for SELECT and ORDER
             string selectQuery_Person = "SELECT * FROM Persoana_Universitate ORDER BY Name";
+            
+            //the SqlDataAdapter is used to execute the SQL command and populate the DataSet with the ordered data
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery_Person, conn);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet, "Persoana_Universitate");
 
             
             
