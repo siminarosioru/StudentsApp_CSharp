@@ -112,6 +112,9 @@ namespace StudentsApp_CSharp
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet, "Persoana_Universitate");
 
+            //set the data source for DataGridView
+            persoana_UniversitateDataGridView.DataSource = dataSet.Tables["Persoana_Universitate"].DefaultView;
+            
             
             
             //created the object for name compatison
