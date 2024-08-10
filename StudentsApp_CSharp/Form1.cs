@@ -115,9 +115,10 @@ namespace StudentsApp_CSharp
             //set the data source for DataGridView
             persoana_UniversitateDataGridView.DataSource = dataSet.Tables["Persoana_Universitate"].DefaultView;
             
+            //closed the database connection
+            conn.Close();
             
-            
-            //created the object for name compatison
+            //created the object for name comparison
             CompareName compareName_obj = new CompareName();
             list_student.Sort(compareName_obj);
             listDisplay();
