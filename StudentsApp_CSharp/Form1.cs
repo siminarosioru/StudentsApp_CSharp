@@ -127,6 +127,11 @@ namespace StudentsApp_CSharp
         //created the event for the "Order by notes" button
         private void btn_OrderByNotes_Click(object sender, EventArgs e)
         {
+            //created the connection to a local database and see all the information ordered by notes
+            string connectionString=@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            
             CompareAverage compareAverage_obj = new CompareAverage();
             list_student.Sort(compareAverage_obj);
             listDisplay();
