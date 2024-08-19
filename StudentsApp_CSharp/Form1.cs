@@ -130,6 +130,9 @@ namespace StudentsApp_CSharp
             //created the connection to a local database and see all the information ordered by notes
             string connectionString=@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
             SqlConnection conn = new SqlConnection(connectionString);
+            
+            //opened the database connection
+            conn.Open();
 
             
             CompareAverage compareAverage_obj = new CompareAverage();
