@@ -103,7 +103,7 @@ namespace StudentsApp_CSharp
             string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\S&B\Documents\Persoane.mdf; Integrated Security = True";
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
-
+            
             //SQL command for SELECT and ORDER
             string selectQuery_Person = "SELECT * FROM Persoana_Universitate ORDER BY Name";
             
@@ -134,6 +134,10 @@ namespace StudentsApp_CSharp
             //opened the database connection
             conn.Open();
 
+            //SQL command for SELECT and ORDER BY
+            string selectQuery_Students = "SELECT * FROM StudentUniversitate ORDER BY Notes";
+
+            
             
             CompareAverage compareAverage_obj = new CompareAverage();
             list_student.Sort(compareAverage_obj);
