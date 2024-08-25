@@ -145,7 +145,8 @@ namespace StudentsApp_CSharp
             //set the data source for DataGridView
             studentUniversitateDataGridView.DataSource = dataSet.Tables["StudentUniversitate"].DefaultView;
 
-            
+            //closed the database connection
+            conn.Close();
             
             CompareAverage compareAverage_obj = new CompareAverage();
             list_student.Sort(compareAverage_obj);
