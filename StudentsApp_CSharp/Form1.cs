@@ -141,8 +141,11 @@ namespace StudentsApp_CSharp
             SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery_Students, conn);
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet, "StudentUniversitate");
+            
+            //set the data source for DataGridView
+            studentUniversitateDataGridView.DataSource = dataSet.Tables["StudentUniversitate"].DefaultView;
 
-
+            
             
             CompareAverage compareAverage_obj = new CompareAverage();
             list_student.Sort(compareAverage_obj);
